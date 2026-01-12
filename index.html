@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Araújo - Nail Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Jennifer Araújo Logo">
+            </div>
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="#" onclick="showPage('inicio')">Início</a></li>
+                    <li><a href="#" onclick="showPage('servicos')">Serviços</a></li>
+                    <li><a href="#" onclick="showPage('cursos')">Cursos</a></li>
+                    <li><a href="#" onclick="showPage('marca')">Marca Parceira</a></li>
+                    <li><a href="#" onclick="showPage('contato')">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main id="content-area">
+        <!-- O conteúdo será injetado dinamicamente pelo JavaScript -->
+    </main>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content-wrapper">
+            <button class="prev-btn" onclick="changeModalImage(-1)">&#10094;</button>
+            <img id="modal-img" src="" alt="Imagem em destaque">
+            <button class="next-btn" onclick="changeModalImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
