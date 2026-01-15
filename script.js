@@ -285,7 +285,7 @@ function getServicePageHTML(data) {
 
                     <div class="bottom-buttons">
                         <a href="https://maps.app.goo.gl/CUQJdFnH3ozQjzUh7" target="_blank" class="bottom-btn"><img src="img/btn_loc.png" alt="Localização"></a>
-                        <a href="https://www.instagram.com/jenyfferaraujonails/" target="_blank" class="bottom-btn"><img src="img/btn_insta.png" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/jenyfferaraujoacademy/" target="_blank" class="bottom-btn"><img src="img/btn_insta.png" alt="Instagram"></a>
                         <a href="https://wa.me/5583981935139" target="_blank" class="bottom-btn"><img src="img/btn_whats.png" alt="WhatsApp"></a>
                     </div>
                 </div>
