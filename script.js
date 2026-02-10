@@ -10,22 +10,20 @@ const pagesData = [
         services: {
             'APLICAÇÃO': [
                 { name: 'Gel Natural', price: 'R$ 110,00' },
-                { name: 'baby boomer', price: 'R$ 110,00' },
-                { name: 'Baby Glitter', price: 'R$ 110,00' },
+                { name: 'baby boomer', price: 'R$ 120,00' },
+                { name: 'Baby Glitter', price: 'R$ 125,00' },
                 { name: 'Milk', price: 'R$ 110,00' },
-                { name: 'Baby Collor', price: 'R$ 110,00' },
-                { name: 'Art Gringa', price: 'R$ 120,00' },
-                { name: 'Esmaltação', price: 'R$ 110,00' },
+                { name: 'Baby Collor', price: 'R$ 120,00' },
+                { name: 'Art Gringa', price: 'R$ 125,00' },                
                 { name: 'Esmaltação Permanente', price: 'R$ 120,00' }
             ],
             'MANUTENÇÃO': [
                 { name: 'Gel Natural', price: 'R$ 95,00' },
-                { name: 'baby boomer', price: 'R$ 95,00' },
-                { name: 'Baby Glitter', price: 'R$ 95,00' },
+                { name: 'baby boomer', price: 'R$ 100,00' },
+                { name: 'Baby Glitter', price: 'R$ 100,00' },
                 { name: 'Milk', price: 'R$ 95,00' },
-                { name: 'Baby Collor', price: 'R$ 95,00' },
-                { name: 'Art Gringa', price: 'R$ 100,00' },
-                { name: 'Esmaltação', price: 'R$ 95,00' },
+                { name: 'Baby Collor', price: 'R$ 100,00' },
+                { name: 'Art Gringa', price: 'R$ 100,00' },                
                 { name: 'Esmaltação Permanente', price: 'R$ 100,00' }
             ]
         }
@@ -64,7 +62,7 @@ const pagesData = [
         services: {
             'APLICAÇÃO': [
                 { name: 'Natural', price: 'R$ 110,00' },
-                { name: 'Decorada', price: 'R$ 125,00' }
+                { name: 'Decorada', price: 'R$ 130,00' }
             ],
             'MANUTENÇÃO': [
                 { name: 'Natural', price: 'R$ 95,00' },
@@ -95,9 +93,12 @@ const pagesData = [
                 description: 'Inclui Cuticulagem e esmaltação tradicional nas mãos e pés' 
             },
             { name: 'Blindagem Brilho gloss', price: 'R$ 40,00', description: 'Previne a quebra, efeito base permanente Inclui cuticulagem. Durabilidade 20 dias' },
-            { name: 'Manicure Moderna', price: 'R$ 50,00', description: 'Base permanente + Esmaltação em Gel Cuticulagem' },
-            { name: 'Manicure tradicional', price: 'R$ 20,00', description: 'Inclui Cuticulagem + esmaltação' },
-            { name: 'Pedicure tradicional', price: 'R$ 20,00', description: 'Inclui Cuticulagem + esmaltação' },
+            { name: 'Manicure Moderna', price: 'R$ 60,00', description: 'Base permanente + Esmaltação em Gel + Cuticulagem' },
+            { name: 'Pedicure Moderno', price: 'R$ 60,00', description: 'Duração mais de 1 mês, já sai seco!' },
+            { name: 'Manicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
+            { name: 'Manicure tradicional com francesinha', price: 'R$ 35,00', description: 'Esmaltação tradicional' },
+            { name: 'Pedicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
+            { name: 'Pedicure tradicional com francesinha', price: 'R$ 35,00', description: 'Inclui Cuticulagem + esmaltação' },
             { name: 'Combo Manicure + Pedicure Tradicional', price: 'R$ 35,00' }
         ]
     },
@@ -108,10 +109,33 @@ const pagesData = [
         hasTypes: false,
         services: [
             { name: 'Escalda pés c/ SPA', price: 'R$ 70,00', description: 'Pedicure tradicional + Lixamento no dorso plantar + Esfoliação + Hidratação profunda + massagem + ofurô' },
-            { name: 'Jelly SPA Express', price: 'R$ 20,00', description: 'Cuticulagem no dorso plantar + esfoliação + Hidratação profunda + massagem' },
+            { 
+                name: 'SPA rachadura e calosidade', 
+                price: 'R$ 80,00', 
+                altPrice: 'R$ 95,00', 
+                priceLabel: 'tradicional', 
+                altPriceLabel: 'gel',
+                description: 'Com cuticulagem e esmaltação (tradicional ou gel)' 
+            },
+            { name: 'Jelly SPA Express', price: 'R$ 30,00', description: 'Lixamento no dorso plantar + esfoliação + Hidratação profunda + massagem' },
             { name: 'Pedicure Gel – Diamant', price: 'R$ 50,00', description: 'Cuticulagem + blindagem + esmaltação em gel + esfoliação + Massagem relaxante + lixamento no dorso plantar' },
             { name: 'Plástica dos pés', price: 'R$ 80,00', description: 'Inclui pedicure tradicional + lixamento no dorso plantar + Esfoliação + hidratação profunda e massagem relaxante' },
             { name: 'Escalda Pés + Plástica dos Pés', price: 'R$ 120,00' }
+        ]
+    },
+    {
+        id: 'estetica-facial',
+        title: 'Estética e Design Facial',
+        image: 'img/estetica_facial.png',
+        hasTypes: false,
+        services:[
+            { name: 'Epilação do buço', price: 'R$15,00'},
+            { name: 'Extensão de cílios - Melhores produtos!', price: 'R$100,00', description: 'A partir de R$100,00 - Consultar Volumes'},
+            { name: 'Brow e Lash lifting', price: 'R$70,00', description: 'Pelos enrolados que necessitam de alinhamento e design moderno'},
+            { name: 'Micropigmentação', price: 'R$300,00', description: 'A partir de R$300,00 - consulta prévia'},
+            { name: 'Design masculino', price: 'R$35,00', description:'Consultar antes'},
+            { name: 'Design de henna', price: 'R$50,00', description:'Design + aplicação de henna'},
+            { name: 'Extensão de cílios', price: 'R$100,00', description:'Todos os volumes a partir de R$100,00 - consultar'}
         ]
     },
     {
