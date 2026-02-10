@@ -118,7 +118,7 @@ const pagesData = [
                 description: 'Com cuticulagem e esmaltação (tradicional ou gel)' 
             },
             { name: 'Jelly SPA Express', price: 'R$ 30,00', description: 'Lixamento no dorso plantar + esfoliação + Hidratação profunda + massagem' },
-            { name: 'Pedicure Gel – Diamant', price: 'R$ 50,00', description: 'Cuticulagem + blindagem + esmaltação em gel + esfoliação + Massagem relaxante + lixamento no dorso plantar' },
+            { name: 'Pedicure Gel – Diamant', price: 'R$ 80,00', description: 'Cuticulagem + blindagem + esmaltação em gel + esfoliação + Massagem relaxante + lixamento no dorso plantar' },
             { name: 'Plástica dos pés', price: 'R$ 80,00', description: 'Inclui pedicure tradicional + lixamento no dorso plantar + Esfoliação + hidratação profunda e massagem relaxante' },
             { name: 'Escalda Pés + Plástica dos Pés', price: 'R$ 120,00' }
         ]
