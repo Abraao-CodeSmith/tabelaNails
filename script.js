@@ -78,16 +78,16 @@ const pagesData = [
         services: [
             { 
                 name: 'Manicure/Pedicure gel', 
-                price: 'R$ 80,00', 
-                altPrice: 'R$ 50,00', 
+                price: 'R$ 100,00', 
+                altPrice: 'R$ 60,00', 
                 priceLabel: 'completo', 
                 altPriceLabel: 'individual',
                 description: 'Inclui Cuticulagem e Blindagem + esmaltação em gel' 
             },
             { 
                 name: 'Manicure/Pedicure tradicional', 
-                price: 'R$ 35,00', 
-                altPrice: 'R$ 20,00', 
+                price: 'R$ 50,00', 
+                altPrice: 'R$ 30,00', 
                 priceLabel: 'completo', 
                 altPriceLabel: 'individual',
                 description: 'Inclui Cuticulagem e esmaltação tradicional nas mãos e pés' 
@@ -98,8 +98,8 @@ const pagesData = [
             { name: 'Manicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
             { name: 'Manicure tradicional com francesinha', price: 'R$ 35,00', description: 'Esmaltação tradicional' },
             { name: 'Pedicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
-            { name: 'Pedicure tradicional com francesinha', price: 'R$ 35,00', description: 'Inclui Cuticulagem + esmaltação' },
-            { name: 'Combo Manicure + Pedicure Tradicional', price: 'R$ 35,00' }
+            { name: 'Pedicure tradicional com francesinha', price: 'R$ 35,00', description: 'Inclui Cuticulagem + esmaltação' }
+            
         ]
     },
     {
