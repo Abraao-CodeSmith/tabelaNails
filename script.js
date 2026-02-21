@@ -231,6 +231,8 @@ function moveGallery(direction) {
 }
 
 function renderPage(index) {
+    window.scrollTo(0, 0);
+    
     const contentArea = document.getElementById('content-area');
     
     // Criar nova seção para animação
@@ -420,12 +422,17 @@ function toggleMobilePrice(headerElement) {
 
     // Fechar outros abertos
     document.querySelectorAll('.service-price-wrapper.show').forEach(el => {
-        el.classList.remove('show');
-        const parentArrow = el.closest('.service-item').querySelector('.mobile-arrow');
-        if (parentArrow) parentArrow.classList.remove('up');
+        if (el !== priceWrapper) {
+            el.classList.remove('show');
+            const parentArrow = el.closest('.service-item').querySelector('.mobile-arrow');
+            if (parentArrow) parentArrow.classList.remove('up');
+        }
     });
 
-    if (!isShowing) {
+    if (isShowing) {
+        priceWrapper.classList.remove('show');
+        arrow.classList.remove('up');
+    } else {
         priceWrapper.classList.add('show');
         arrow.classList.add('up');
     }
