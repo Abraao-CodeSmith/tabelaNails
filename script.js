@@ -1,4 +1,6 @@
-// Dados dos Serviços (Objetos)
+// =============================================
+// DATA
+// =============================================
 const pagesData = [
     {
         id: 'extensao-tip',
@@ -9,21 +11,21 @@ const pagesData = [
         currentType: 'APLICAÇÃO',
         services: {
             'APLICAÇÃO': [
-                { name: 'Gel Natural', price: 'R$ 110,00' },
-                { name: 'baby boomer', price: 'R$ 120,00' },
-                { name: 'Baby Glitter', price: 'R$ 125,00' },
-                { name: 'Milk', price: 'R$ 110,00' },
-                { name: 'Baby Collor', price: 'R$ 120,00' },
-                { name: 'Art Gringa', price: 'R$ 125,00' },                
+                { name: 'Gel Natural',           price: 'R$ 110,00' },
+                { name: 'Baby Boomer',           price: 'R$ 120,00' },
+                { name: 'Baby Glitter',          price: 'R$ 125,00' },
+                { name: 'Milk',                  price: 'R$ 110,00' },
+                { name: 'Baby Collor',           price: 'R$ 120,00' },
+                { name: 'Art Gringa',            price: 'R$ 125,00' },                
                 { name: 'Esmaltação Permanente', price: 'R$ 120,00' }
             ],
             'MANUTENÇÃO': [
-                { name: 'Gel Natural', price: 'R$ 95,00' },
-                { name: 'baby boomer', price: 'R$ 100,00' },
-                { name: 'Baby Glitter', price: 'R$ 100,00' },
-                { name: 'Milk', price: 'R$ 95,00' },
-                { name: 'Baby Collor', price: 'R$ 100,00' },
-                { name: 'Art Gringa', price: 'R$ 100,00' },                
+                { name: 'Gel Natural',           price: 'R$ 95,00' },
+                { name: 'Baby Boomer',           price: 'R$ 100,00' },
+                { name: 'Baby Glitter',          price: 'R$ 100,00' },
+                { name: 'Milk',                  price: 'R$ 95,00' },
+                { name: 'Baby Collor',           price: 'R$ 100,00' },
+                { name: 'Art Gringa',            price: 'R$ 100,00' },                
                 { name: 'Esmaltação Permanente', price: 'R$ 100,00' }
             ]
         }
@@ -37,69 +39,54 @@ const pagesData = [
         currentType: 'APLICAÇÃO',
         services: {
             'APLICAÇÃO': [
-                { name: 'Gel Natural', price: 'R$ 100,00' },
-                { name: 'Francesa', price: 'R$ 120,00' },
+                { name: 'Gel Natural',  price: 'R$ 100,00' },
+                { name: 'Francesa',     price: 'R$ 120,00' },
                 { name: 'Gel Decorado', price: 'R$ 110,00' },
-                { name: 'Esmaltação', price: 'R$ 110,00' },
-                { name: 'Art Gringa', price: 'R$ 120,00' }
+                { name: 'Esmaltação',   price: 'R$ 110,00' },
+                { name: 'Art Gringa',   price: 'R$ 120,00' }
             ],
             'MANUTENÇÃO': [
-                { name: 'Gel Natural', price: 'R$ 90,00' },
-                { name: 'Francesa', price: 'R$ 100,00' },
+                { name: 'Gel Natural',  price: 'R$ 90,00' },
+                { name: 'Francesa',     price: 'R$ 100,00' },
                 { name: 'Gel Decorado', price: 'R$ 90,00' },
-                { name: 'Esmaltação', price: 'R$ 95,00' },
-                { name: 'Art Gringa', price: 'R$ 100,00' }
+                { name: 'Esmaltação',   price: 'R$ 95,00' },
+                { name: 'Art Gringa',   price: 'R$ 100,00' }
             ]
         }
     },
     {
         id: 'acrilico',
-        title: 'Acrilico',
+        title: 'Acrílico',
         image: 'img/acrilico.png',
         hasTypes: true,
         types: ['APLICAÇÃO', 'MANUTENÇÃO'],
         currentType: 'APLICAÇÃO',
         services: {
             'APLICAÇÃO': [
-                { name: 'Natural', price: 'R$ 110,00' },
+                { name: 'Natural',  price: 'R$ 110,00' },
                 { name: 'Decorada', price: 'R$ 130,00' }
             ],
             'MANUTENÇÃO': [
-                { name: 'Natural', price: 'R$ 95,00' },
+                { name: 'Natural',  price: 'R$ 95,00' },
                 { name: 'Decorada', price: 'R$ 110,00' }
             ]
         }
     },
     {
         id: 'manicure-moderna',
-        title: 'Serviços Manicure Moderna',
+        title: 'Manicure Moderna',
         image: 'img/manicure_moderna.png',
         hasTypes: false,
         services: [
-            { 
-                name: 'Manicure/Pedicure gel', 
-                price: 'R$ 100,00', 
-                altPrice: 'R$ 60,00', 
-                priceLabel: 'completo', 
-                altPriceLabel: 'individual',
-                description: 'Inclui Cuticulagem e Blindagem + esmaltação em gel' 
-            },
-            { 
-                name: 'Manicure/Pedicure tradicional', 
-                price: 'R$ 50,00', 
-                altPrice: 'R$ 30,00', 
-                priceLabel: 'completo', 
-                altPriceLabel: 'individual',
-                description: 'Inclui Cuticulagem e esmaltação tradicional nas mãos e pés' 
-            },
-            { name: 'Blindagem Brilho gloss', price: 'R$ 40,00', description: 'Previne a quebra, efeito base permanente Inclui cuticulagem. Durabilidade 20 dias' },
+            { name: 'Manicure/Pedicure Gel', price: 'R$ 100,00', altPrice: 'R$ 60,00', priceLabel: 'completo', altPriceLabel: 'individual', description: 'Inclui cuticulagem e blindagem + esmaltação em gel.' },
+            { name: 'Manicure/Pedicure Tradicional', price: 'R$ 50,00', altPrice: 'R$ 30,00', priceLabel: 'completo', altPriceLabel: 'individual', description: 'Inclui cuticulagem e esmaltação tradicional nas mãos e pés.' },
+            { name: 'Blindagem Brilho Gloss', price: 'R$ 40,00', description: 'Previne a quebra, efeito base permanente. Inclui cuticulagem. Durabilidade 20 dias.' },
             { name: 'Manicure Moderna', price: 'R$ 60,00', description: 'Base permanente + Esmaltação em Gel + Cuticulagem' },
             { name: 'Pedicure Moderno', price: 'R$ 60,00', description: 'Duração mais de 1 mês, já sai seco!' },
             { name: 'Manicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
             { name: 'Manicure tradicional com francesinha', price: 'R$ 35,00', description: 'Esmaltação tradicional' },
             { name: 'Pedicure tradicional', price: 'R$ 30,00', description: 'Inclui Cuticulagem + esmaltação' },
             { name: 'Pedicure tradicional com francesinha', price: 'R$ 35,00', description: 'Inclui Cuticulagem + esmaltação' }
-            
         ]
     },
     {
@@ -108,8 +95,8 @@ const pagesData = [
         image: 'img/tratamentos_podais.png',
         hasTypes: false,
         services: [
-            { name: 'Escalda pés c/ SPA', price: 'R$ 70,00', description: 'Pedicure tradicional + Lixamento no dorso plantar + Esfoliação + Hidratação profunda + massagem + ofurô' },
-            { 
+            { name: 'Escalda Pés c/ SPA', price: 'R$ 70,00', description: 'Pedicure tradicional + lixamento no dorso plantar + esfoliação + hidratação profunda + massagem + ofurô.' },
+             { 
                 name: 'SPA rachadura e calosidade', 
                 price: 'R$ 80,00', 
                 altPrice: 'R$ 95,00', 
@@ -123,6 +110,7 @@ const pagesData = [
             { name: 'Escalda Pés + Plástica dos Pés', price: 'R$ 120,00' }
         ]
     },
+
     {
         id: 'estetica-facial',
         title: 'Estética e Design Facial',
@@ -138,6 +126,7 @@ const pagesData = [
             { name: 'Extensão de cílios', price: 'R$100,00', description:'Todos os volumes a partir de R$100,00 - consultar'}
         ]
     },
+
     {
         id: 'servicos-adicionais',
         title: 'Serviços Adicionais',
@@ -162,316 +151,394 @@ const pagesData = [
 ];
 
 const photos = [
-    'fotos/foto1.jpg',
-    'fotos/foto2.jpg',
-    'fotos/foto3.jpg',
-    'fotos/foto4.jpg',
-    'fotos/foto5.jpg',
-    'fotos/foto6.jpg',
-    'fotos/foto7.jpg'
+    'fotos/foto1.jpg','fotos/foto2.jpg','fotos/foto3.jpg',
+    'fotos/foto4.jpg','fotos/foto5.jpg','fotos/foto6.jpg','fotos/foto7.jpg'
 ];
 
+// =============================================
+// DATA — carrega do localStorage se disponível
+// =============================================
+function loadSavedServices() {
+    const raw = localStorage.getItem('jn_services');
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    pagesData.forEach(page => {
+        if (!saved[page.id]) return;
+        if (page.hasTypes) {
+            page.services['APLICAÇÃO'] = saved[page.id]['APLICAÇÃO'] || page.services['APLICAÇÃO'];
+            page.services['MANUTENÇÃO'] = saved[page.id]['MANUTENÇÃO'] || page.services['MANUTENÇÃO'];
+        } else {
+            page.services = saved[page.id] || page.services;
+        }
+    });
+}
+
+function loadSavedServiceImages() {
+    const raw = localStorage.getItem('jn_service_images');
+    if (!raw) return;
+    const imgs = JSON.parse(raw);
+    pagesData.forEach(page => {
+        if (imgs[page.id]) page.image = imgs[page.id];
+    });
+}
+
+function loadSavedGallery() {
+    const raw = localStorage.getItem('jn_gallery');
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    if (Array.isArray(saved) && saved.length) {
+        photos.length = 0;
+        saved.forEach(p => photos.push(p));
+    }
+}
 let currentPageIndex = 0;
 let currentModalImageIndex = 0;
 let isAnimating = false;
+let galleryScrollPos = 0;
 
-// Inicialização
+// =============================================
+// INIT
+// =============================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Carrega dados salvos pelo admin antes de renderizar
+    loadSavedServices();
+    loadSavedServiceImages();
+    loadSavedGallery();
+
     renderPage(currentPageIndex);
-    
-    // Evento de scroll para trocar de página
-    window.addEventListener('wheel', (e) => {
-        if (isAnimating) return;
-        
-        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2;
-        const isAtTop = window.scrollY <= 2;
-
-        if (e.deltaY > 0 && isAtBottom) {
-            nextPage();
-        } else if (e.deltaY < 0 && isAtTop) {
-            prevPage();
-        }
-    }, { passive: false });
-
-    // Touch events para mobile
-    let touchStartY = 0;
-    window.addEventListener('touchstart', e => touchStartY = e.touches[0].clientY);
-    window.addEventListener('touchend', e => {
-        if (isAnimating) return;
-        let touchEndY = e.changedTouches[0].clientY;
-        
-        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2;
-        const isAtTop = window.scrollY <= 2;
-
-        if (touchStartY - touchEndY > 70 && isAtBottom) nextPage();
-        if (touchEndY - touchStartY > 70 && isAtTop) prevPage();
-    });
-
-    // Modal click to close
-    const modalImg = document.getElementById('modal-img');
-    if (modalImg) {
-        modalImg.onclick = (e) => {
-            e.stopPropagation();
-            closeModal();
-        };
-    }
+    initScrollHeader();
+    initWheelNav();
+    initSwipe();
 });
 
-let galleryScrollPos = 0;
-function moveGallery(direction) {
-    const track = document.getElementById('gallery-track');
-    const itemWidth = 320; // item + gap
-    galleryScrollPos += direction * itemWidth;
-    
-    const maxScroll = track.scrollWidth - document.getElementById('gallery-wrapper').offsetWidth;
-    if (galleryScrollPos < 0) galleryScrollPos = 0;
-    if (galleryScrollPos > maxScroll) galleryScrollPos = maxScroll;
-    
+function initScrollHeader() {
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+}
+
+// Controla se o usuário já atingiu o limite e está "pronto" para trocar de seção.
+// Só muda de seção na segunda rolagem após atingir o limite.
+let scrollEdgeReached = false;
+let scrollEdgeTimer = null;
+
+function initWheelNav() {
+    window.addEventListener('wheel', (e) => {
+        if (isAnimating) return;
+
+        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 4;
+        const atTop    = window.scrollY <= 4;
+
+        if (e.deltaY > 0 && atBottom) {
+            if (scrollEdgeReached) {
+                // Segunda rolagem no limite: troca de seção
+                scrollEdgeReached = false;
+                nextPage();
+            } else {
+                // Primeira vez que chegou ao fundo: marca e aguarda
+                scrollEdgeReached = true;
+                clearTimeout(scrollEdgeTimer);
+                // Reseta se o usuário parar de rolar por 1.5s
+                scrollEdgeTimer = setTimeout(() => { scrollEdgeReached = false; }, 1500);
+            }
+        } else if (e.deltaY < 0 && atTop) {
+            if (scrollEdgeReached) {
+                scrollEdgeReached = false;
+                prevPage();
+            } else {
+                scrollEdgeReached = true;
+                clearTimeout(scrollEdgeTimer);
+                scrollEdgeTimer = setTimeout(() => { scrollEdgeReached = false; }, 1500);
+            }
+        } else {
+            // Usuário rolou para dentro da seção: reseta o estado
+            scrollEdgeReached = false;
+            clearTimeout(scrollEdgeTimer);
+        }
+    }, { passive: true });
+}
+
+function initSwipe() {
+    let startY = 0;
+    window.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    window.addEventListener('touchend', e => {
+        if (isAnimating) return;
+        const diff = startY - e.changedTouches[0].clientY;
+        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 4;
+        const atTop    = window.scrollY <= 4;
+        if (diff > 60 && atBottom) nextPage();
+        if (diff < -60 && atTop) prevPage();
+    }, { passive: true });
+}
+
+// =============================================
+// NAVIGATION
+// =============================================
+function nextPage() {
+    if (currentPageIndex < pagesData.length) { currentPageIndex++; renderPage(currentPageIndex); }
+}
+function prevPage() {
+    if (currentPageIndex > 0) { currentPageIndex--; renderPage(currentPageIndex); }
+}
+function showPage(type) {
+    if (isAnimating) return;
+    if (type === 'inicio' || type === 'servicos') currentPageIndex = 0;
+    else if (type === 'espaco') currentPageIndex = pagesData.length;
+    renderPage(currentPageIndex);
+}
+
+// =============================================
+// RENDER
+// =============================================
+function renderPage(index) {
+    const area = document.getElementById('content-area');
+    const newSection = document.createElement('div');
+    newSection.className = 'page-section';
+    newSection.innerHTML = index === pagesData.length ? getSpacePageHTML() : getServicePageHTML(pagesData[index]);
+
+    const current = area.querySelector('.page-section.active');
+    if (current) {
+        isAnimating = true;
+        current.classList.remove('active');
+        current.style.opacity = '0';
+        current.style.transform = 'translateY(-16px)';
+        setTimeout(() => {
+            area.innerHTML = '';
+            area.appendChild(newSection);
+            requestAnimationFrame(() => {
+                newSection.classList.add('active');
+                isAnimating = false;
+                window.scrollTo(0, 0);
+            });
+        }, 380);
+    } else {
+        area.appendChild(newSection);
+        requestAnimationFrame(() => newSection.classList.add('active'));
+    }
+}
+
+// =============================================
+// SERVICE PAGE HTML
+// =============================================
+function getServicePageHTML(data) {
+    const isFirst = pagesData.indexOf(data) === 0;
+    const services = data.hasTypes ? data.services[data.currentType] : data.services;
+
+    const heroHTML = isFirst ? `
+        <div class="hero-banner">
+            <p class="hero-eyebrow">Nails Designer</p>
+            <h1 class="hero-name">Jennifer Araújo</h1>
+            <p class="hero-sub">Beleza que transforma</p>
+        </div>` : '';
+
+    const typeSelectorHTML = data.hasTypes ? `
+        <div class="type-selector">
+            ${data.types.map(t => `
+                <button class="type-btn ${data.currentType === t ? 'selected' : ''}"
+                        onclick="changeType('${data.id}','${t}')">${t}</button>
+            `).join('')}
+        </div>` : '';
+
+    const servicesHTML = services.map((s, i) => `
+        <li class="service-item">
+            <div class="service-header" onclick="handleServiceClick(this, event)">
+                <div class="service-name-wrapper">
+                    <span class="service-name">${s.name}</span>
+                    ${s.description ? `<button class="desc-toggle" onclick="toggleDescription(event, this)" aria-label="Ver descrição">+</button>` : ''}
+                    <span class="mobile-arrow">▾</span>
+                </div>
+                <div class="service-price-wrapper">
+                    <span class="price" id="price-${data.id}-${i}">${s.price}</span>
+                    ${s.altPrice ? `<button class="price-toggle-btn" onclick="toggleAltPrice(event,'${data.id}',${i})">${s.priceLabel}</button>` : ''}
+                </div>
+            </div>
+            ${s.description ? `<div class="service-description">${s.description}</div>` : ''}
+        </li>
+    `).join('');
+
+    return `
+        ${heroHTML}
+        <div class="service-page">
+            <div class="container">
+                <div class="page-layout">
+                    <div class="content-left">
+                        <div class="page-title-wrap">
+                            <h2 class="page-title">${data.title}</h2>
+                            <div class="title-line"></div>
+                        </div>
+                        ${typeSelectorHTML}
+                        <ul class="services-list">${servicesHTML}</ul>
+                        <div class="bottom-buttons">
+                            <a href="https://maps.app.goo.gl/CUQJdFnH3ozQjzUh7" target="_blank" class="bottom-btn">
+                                <img src="img/btn_loc.png" alt=""> Localização
+                            </a>
+                            <a href="https://www.instagram.com/jenyfferaraujoacademy/" target="_blank" class="bottom-btn">
+                                <img src="img/btn_insta.png" alt=""> Instagram
+                            </a>
+                            <a href="https://wa.me/5583981935139" target="_blank" class="bottom-btn">
+                                <img src="img/btn_whats.png" alt=""> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="service-image-wrap">
+                            <img src="${data.image}" alt="${data.title}" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+}
+
+// =============================================
+// ESPAÇO PAGE HTML
+// =============================================
+function getSpacePageHTML() {
+    return `
+        <div class="space-page">
+            <div class="container">
+                <div class="hero-banner">
+                    <p class="hero-eyebrow">Venha nos visitar</p>
+                    <h1 class="hero-name">Nosso Espaço</h1>
+                    <div class="gold-divider"></div>
+                    <div class="space-intro">
+                        <p>Aconchegante e inovador, com serviços de alto padrão para melhor lhe atender e extrair a pérola que há em você.</p>
+                    </div>
+                </div>
+                <img src="img/elementosfinal.png" alt="Elementos decorativos" class="elements-img">
+                <div class="gallery-container">
+                    <button class="gallery-nav-btn" onclick="moveGallery(-1)" aria-label="Anterior">&#10094;</button>
+                    <div class="gallery-track-wrapper" id="gallery-wrapper">
+                        <div class="gallery-track" id="gallery-track">
+                            ${photos.map((p, i) => `
+                                <div class="gallery-item" onclick="openModal(${i})">
+                                    <img src="${p}" alt="Foto do espaço ${i + 1}" loading="lazy">
+                                </div>`).join('')}
+                        </div>
+                    </div>
+                    <button class="gallery-nav-btn" onclick="moveGallery(1)" aria-label="Próxima">&#10095;</button>
+                </div>
+                <div class="bottom-buttons" style="justify-content:center;margin-top:48px;">
+                    <a href="https://maps.app.goo.gl/CUQJdFnH3ozQjzUh7" target="_blank" class="bottom-btn">
+                        <img src="img/btn_loc.png" alt=""> Como chegar
+                    </a>
+                    <a href="https://wa.me/5583981935139" target="_blank" class="bottom-btn">
+                        <img src="img/btn_whats.png" alt=""> Agendar
+                    </a>
+                </div>
+            </div>
+        </div>`;
+}
+
+// =============================================
+// SERVICE INTERACTIONS
+// =============================================
+function changeType(pageId, type) {
+    const page = pagesData.find(p => p.id === pageId);
+    if (page) { page.currentType = type; renderPage(currentPageIndex); }
+}
+
+function handleServiceClick(header, event) {
+    if (window.innerWidth > 768) return;
+    if (event.target.closest('.desc-toggle') || event.target.closest('.price-toggle-btn')) return;
+    const priceWrapper = header.querySelector('.service-price-wrapper');
+    const arrow = header.querySelector('.mobile-arrow');
+    const isOpen = priceWrapper.classList.contains('show');
+    document.querySelectorAll('.service-price-wrapper.show').forEach(el => {
+        el.classList.remove('show');
+        const a = el.closest('.service-item').querySelector('.mobile-arrow');
+        if (a) a.classList.remove('up');
+    });
+    if (!isOpen) {
+        priceWrapper.classList.add('show');
+        if (arrow) arrow.classList.add('up');
+    }
+}
+
+function toggleDescription(event, btn) {
+    event.stopPropagation();
+    const item = btn.closest('.service-item');
+    const desc = item.querySelector('.service-description');
+    const isOpen = desc.classList.contains('visible');
+    desc.classList.toggle('visible', !isOpen);
+    btn.textContent = isOpen ? '+' : '−';
+    btn.classList.toggle('open', !isOpen);
+}
+
+function toggleAltPrice(event, pageId, idx) {
+    event.stopPropagation();
+    const page = pagesData.find(p => p.id === pageId);
+    const service = page.hasTypes ? page.services[page.currentType][idx] : page.services[idx];
+    const priceEl = document.getElementById(`price-${pageId}-${idx}`);
+    const btn = event.currentTarget;
+    const showingMain = btn.textContent.trim() === service.priceLabel;
+    priceEl.textContent = showingMain ? service.altPrice : service.price;
+    btn.textContent = showingMain ? service.altPriceLabel : service.priceLabel;
+}
+
+// =============================================
+// GALLERY
+// =============================================
+function moveGallery(dir) {
+    const track   = document.getElementById('gallery-track');
+    const wrapper = document.getElementById('gallery-wrapper');
+    if (!track || !wrapper) return;
+    galleryScrollPos += dir * 296;
+    const maxScroll = track.scrollWidth - wrapper.offsetWidth;
+    galleryScrollPos = Math.max(0, Math.min(galleryScrollPos, maxScroll));
     track.style.transform = `translateX(-${galleryScrollPos}px)`;
 }
 
-function renderPage(index) {
-    window.scrollTo(0, 0);
-    
-    const contentArea = document.getElementById('content-area');
-    
-    // Criar nova seção para animação
-    const newSection = document.createElement('div');
-    newSection.className = 'page-section';
-    
-    if (index === pagesData.length) {
-        newSection.innerHTML = getSpacePageHTML();
-        newSection.classList.add('space-page');
-    } else {
-        newSection.innerHTML = getServicePageHTML(pagesData[index]);
-    }
-
-    // Lógica de animação
-    const currentSection = contentArea.querySelector('.page-section.active');
-    if (currentSection) {
-        isAnimating = true;
-        currentSection.classList.remove('active');
-        currentSection.style.opacity = '0';
-        currentSection.style.transform = 'translateY(-20px)';
-        
-        setTimeout(() => {
-            contentArea.innerHTML = '';
-            contentArea.appendChild(newSection);
-            setTimeout(() => {
-                newSection.classList.add('active');
-                isAnimating = false;
-            }, 50);
-        }, 500);
-    } else {
-        contentArea.appendChild(newSection);
-        newSection.classList.add('active');
-    }
-}
-
-function getServicePageHTML(data) {
-    const servicesToRender = data.hasTypes ? data.services[data.currentType] : data.services;
-    
-    return `
-        <div class="container">
-            <div class="page-layout">
-                <div class="content-left">
-                    <h1 class="page-title">${data.title}</h1>
-                    
-                    ${data.hasTypes ? `
-                        <div class="type-selector">
-                            ${data.types.map(type => `
-                                <button class="type-btn ${data.currentType === type ? 'selected' : ''}" 
-                                        onclick="changeType('${data.id}', '${type}')">${type}</button>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-
-                    <ul class="services-list">
-                        ${servicesToRender.map((service, sIndex) => `
-                            <li class="service-item">
-                                <div class="service-header" onclick="toggleMobilePrice(this)">
-                                    <div class="service-name-wrapper">
-                                        <span class="service-name">${service.name}</span>
-                                        ${service.description ? `<span class="toggle-desc" onclick="toggleDescription(event, this)">+</span>` : ''}
-                                        <span class="mobile-arrow">▼</span>
-                                    </div>
-                                    <div class="service-price-wrapper">
-                                        <span class="price" id="price-${data.id}-${sIndex}">${service.price}</span>
-                                        ${service.altPrice ? `
-                                            <button class="price-toggle-btn" onclick="togglePriceValue(event, '${data.id}', ${sIndex})">
-                                                ${service.priceLabel}
-                                            </button>
-                                        ` : ''}
-                                    </div>
-                                </div>
-                                ${service.description ? `<div class="service-description">${service.description}</div>` : ''}
-                            </li>
-                        `).join('')}
-                    </ul>
-
-                    <div class="bottom-buttons">
-                        <a href="https://maps.app.goo.gl/CUQJdFnH3ozQjzUh7" target="_blank" class="bottom-btn"><img src="img/btn_loc.png" alt="Localização"></a>
-                        <a href="https://www.instagram.com/jenyfferaraujoacademy/" target="_blank" class="bottom-btn"><img src="img/btn_insta.png" alt="Instagram"></a>
-                        <a href="https://wa.me/5583981935139" target="_blank" class="bottom-btn"><img src="img/btn_whats.png" alt="WhatsApp"></a>
-                    </div>
-                </div>
-                <div class="content-right">
-                    <img src="${data.image}" alt="${data.title}" class="object-image">
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function getSpacePageHTML() {
-    return `
-        <div class="container">
-            <h1 class="page-title">Venha Conhecer Nosso Espaço</h1>
-            <div class="space-content">
-                <p class="space-text">
-                    Aconchegante e Inovador com serviços de Alto Padrão para melhor lhe atender e extrair a pérola que há em você!
-                </p>
-                <img src="img/elementosfinal.png" alt="Elementos" class="elements-img">
-                
-                <div class="gallery-container">
-                    <button class="gallery-nav-btn prev" onclick="moveGallery(-1)">&#10094;</button>
-                    <div class="gallery-track-wrapper" id="gallery-wrapper">
-                        <div class="gallery-track" id="gallery-track">
-                            ${photos.map((photo, index) => `
-                                <div class="gallery-item" onclick="openModal(${index})">
-                                    <img src="${photo}" alt="Foto do espaço">
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    <button class="gallery-nav-btn next" onclick="moveGallery(1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-// Navegação entre páginas
-function nextPage() {
-    if (currentPageIndex < pagesData.length) {
-        currentPageIndex++;
-        renderPage(currentPageIndex);
-    }
-}
-
-function prevPage() {
-    if (currentPageIndex > 0) {
-        currentPageIndex--;
-        renderPage(currentPageIndex);
-    }
-}
-
-function showPage(type) {
-    if (isAnimating) return;
-    
-    // Fechar menu mobile ao clicar em um item
-    const menu = document.querySelector('.desktop-menu');
-    if (menu) menu.classList.remove('active');
-
-    if (type === 'inicio') currentPageIndex = 0;
-    else if (type === 'servicos') currentPageIndex = 0;
-    else if (type === 'contato') currentPageIndex = pagesData.length;
-    renderPage(currentPageIndex);
-}
-
-// Funcionalidades de Serviço
-function changeType(pageId, type) {
-    const page = pagesData.find(p => p.id === pageId);
-    page.currentType = type;
-    renderPage(currentPageIndex);
-}
-
-function toggleDescription(event, element) {
-    event.stopPropagation();
-    const item = element.closest('.service-item');
-    const desc = item.querySelector('.service-description');
-    const isVisible = desc.style.display === 'block';
-    
-    desc.style.display = isVisible ? 'none' : 'block';
-    element.textContent = isVisible ? '+' : '-';
-}
-
-function togglePriceValue(event, pageId, serviceIndex) {
-    event.stopPropagation();
-    const page = pagesData.find(p => p.id === pageId);
-    const service = page.services[serviceIndex];
-    const priceEl = document.getElementById(`price-${pageId}-${serviceIndex}`);
-    const btn = event.target;
-
-    if (btn.textContent.trim() === service.priceLabel) {
-        priceEl.textContent = service.altPrice;
-        btn.textContent = service.altPriceLabel;
-    } else {
-        priceEl.textContent = service.price;
-        btn.textContent = service.priceLabel;
-    }
-}
-
-// Mobile: Mostrar preço ao clicar no nome
-function toggleMobilePrice(headerElement) {
-    if (window.innerWidth > 768) return;
-
-    const priceWrapper = headerElement.querySelector('.service-price-wrapper');
-    const arrow = headerElement.querySelector('.mobile-arrow');
-    const isShowing = priceWrapper.classList.contains('show');
-
-    // Fechar outros abertos
-    document.querySelectorAll('.service-price-wrapper.show').forEach(el => {
-        if (el !== priceWrapper) {
-            el.classList.remove('show');
-            const parentArrow = el.closest('.service-item').querySelector('.mobile-arrow');
-            if (parentArrow) parentArrow.classList.remove('up');
-        }
-    });
-
-    if (isShowing) {
-        priceWrapper.classList.remove('show');
-        arrow.classList.remove('up');
-    } else {
-        priceWrapper.classList.add('show');
-        arrow.classList.add('up');
-    }
-}
-
-// Galeria Modal
+// =============================================
+// MODAL
+// =============================================
 function openModal(index) {
     currentModalImageIndex = index;
     const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-img');
-    modal.style.display = "flex";
-    modalImg.src = photos[index];
+    document.getElementById('modal-img').src = photos[index];
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
     const modal = document.getElementById('image-modal');
-    if (modal) {
-        modal.style.display = "none";
-    }
-}
-
-function toggleMobileMenu() {
-    const menu = document.querySelector('.desktop-menu');
-    if (menu) {
-        menu.classList.toggle('active');
-    }
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
 }
 
 function changeModalImage(step) {
-    currentModalImageIndex += step;
-    if (currentModalImageIndex >= photos.length) currentModalImageIndex = 0;
-    if (currentModalImageIndex < 0) currentModalImageIndex = photos.length - 1;
+    currentModalImageIndex = (currentModalImageIndex + step + photos.length) % photos.length;
     document.getElementById('modal-img').src = photos[currentModalImageIndex];
 }
 
-// Fechar modal ao clicar fora
-window.onclick = function(event) {
+window.addEventListener('click', e => {
     const modal = document.getElementById('image-modal');
-    if (event.target == modal) {
-        closeModal();
-    }
+    if (e.target === modal) closeModal();
+});
+
+window.addEventListener('keydown', e => {
+    const modal = document.getElementById('image-modal');
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft')  changeModalImage(-1);
+    if (e.key === 'ArrowRight') changeModalImage(1);
+});
+
+// =============================================
+// MOBILE MENU
+// =============================================
+function toggleMobileMenu() {
+    const menu   = document.getElementById('desktop-menu');
+    const toggle = document.getElementById('menu-toggle');
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    // Impede scroll do body enquanto menu está aberto
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function closeMobileMenu() {
+    document.getElementById('desktop-menu').classList.remove('open');
+    document.getElementById('menu-toggle').classList.remove('open');
+    document.body.style.overflow = '';
 }
