@@ -16,7 +16,7 @@ const pagesData = [
                 { name: 'Baby Glitter',          price: 'R$ 125,00' },
                 { name: 'Milk',                  price: 'R$ 110,00' },
                 { name: 'Baby Collor',           price: 'R$ 120,00' },
-                { name: 'Art Gringa',            price: 'R$ 125,00' },                
+                { name: 'Art Gringa',            price: 'R$ 125,00' },
                 { name: 'Esmaltação Permanente', price: 'R$ 120,00' }
             ],
             'MANUTENÇÃO': [
@@ -25,7 +25,7 @@ const pagesData = [
                 { name: 'Baby Glitter',          price: 'R$ 100,00' },
                 { name: 'Milk',                  price: 'R$ 95,00' },
                 { name: 'Baby Collor',           price: 'R$ 100,00' },
-                { name: 'Art Gringa',            price: 'R$ 100,00' },                
+                { name: 'Art Gringa',            price: 'R$ 100,00' },
                 { name: 'Esmaltação Permanente', price: 'R$ 100,00' }
             ]
         }
@@ -96,37 +96,27 @@ const pagesData = [
         hasTypes: false,
         services: [
             { name: 'Escalda Pés c/ SPA', price: 'R$ 70,00', description: 'Pedicure tradicional + lixamento no dorso plantar + esfoliação + hidratação profunda + massagem + ofurô.' },
-             { 
-                name: 'SPA rachadura e calosidade', 
-                price: 'R$ 80,00', 
-                altPrice: 'R$ 95,00', 
-                priceLabel: 'tradicional', 
-                altPriceLabel: 'gel',
-                description: 'Com cuticulagem e esmaltação (tradicional ou gel)' 
-            },
+            { name: 'SPA rachadura e calosidade', price: 'R$ 80,00', altPrice: 'R$ 95,00', priceLabel: 'tradicional', altPriceLabel: 'gel', description: 'Com cuticulagem e esmaltação (tradicional ou gel)' },
             { name: 'Jelly SPA Express', price: 'R$ 30,00', description: 'Lixamento no dorso plantar + esfoliação + Hidratação profunda + massagem' },
             { name: 'Pedicure Gel – Diamant', price: 'R$ 80,00', description: 'Cuticulagem + blindagem + esmaltação em gel + esfoliação + Massagem relaxante + lixamento no dorso plantar' },
             { name: 'Plástica dos pés', price: 'R$ 80,00', description: 'Inclui pedicure tradicional + lixamento no dorso plantar + Esfoliação + hidratação profunda e massagem relaxante' },
             { name: 'Escalda Pés + Plástica dos Pés', price: 'R$ 120,00' }
         ]
     },
-
     {
         id: 'estetica-facial',
         title: 'Estética e Design Facial',
         image: 'img/estetica_facial.png',
         hasTypes: false,
-        services:[
-            { name: 'Epilação do buço', price: 'R$15,00'},
-            { name: 'Extensão de cílios - Melhores produtos!', price: 'R$100,00', description: 'A partir de R$100,00 - Consultar Volumes'},
-            { name: 'Brow e Lash lifting', price: 'R$70,00', description: 'Pelos enrolados que necessitam de alinhamento e design moderno'},
-            { name: 'Micropigmentação', price: 'R$300,00', description: 'A partir de R$300,00 - consulta prévia'},
-            { name: 'Design masculino', price: 'R$35,00', description:'Consultar antes'},
-            { name: 'Design de henna', price: 'R$50,00', description:'Design + aplicação de henna'},
-            { name: 'Extensão de cílios', price: 'R$100,00', description:'Todos os volumes a partir de R$100,00 - consultar'}
+        services: [
+            { name: 'Epilação do buço', price: 'R$ 15,00' },
+            { name: 'Extensão de cílios', price: 'R$ 100,00', description: 'A partir de R$100,00 - Consultar Volumes' },
+            { name: 'Brow e Lash lifting', price: 'R$ 70,00', description: 'Pelos enrolados que necessitam de alinhamento e design moderno' },
+            { name: 'Micropigmentação', price: 'R$ 300,00', description: 'A partir de R$300,00 - consulta prévia' },
+            { name: 'Design masculino', price: 'R$ 35,00', description: 'Consultar antes' },
+            { name: 'Design de henna', price: 'R$ 50,00', description: 'Design + aplicação de henna' }
         ]
     },
-
     {
         id: 'servicos-adicionais',
         title: 'Serviços Adicionais',
@@ -156,7 +146,7 @@ const photos = [
 ];
 
 // =============================================
-// DATA — carrega do localStorage se disponível
+// localStorage — carrega dados do admin
 // =============================================
 function loadSavedServices() {
     const raw = localStorage.getItem('jn_services');
@@ -177,9 +167,7 @@ function loadSavedServiceImages() {
     const raw = localStorage.getItem('jn_service_images');
     if (!raw) return;
     const imgs = JSON.parse(raw);
-    pagesData.forEach(page => {
-        if (imgs[page.id]) page.image = imgs[page.id];
-    });
+    pagesData.forEach(page => { if (imgs[page.id]) page.image = imgs[page.id]; });
 }
 
 function loadSavedGallery() {
@@ -191,146 +179,99 @@ function loadSavedGallery() {
         saved.forEach(p => photos.push(p));
     }
 }
-let currentPageIndex = 0;
+
+// =============================================
+// STATE
+// =============================================
 let currentModalImageIndex = 0;
-let isAnimating = false;
 let galleryScrollPos = 0;
 
 // =============================================
 // INIT
 // =============================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Carrega dados salvos pelo admin antes de renderizar
     loadSavedServices();
     loadSavedServiceImages();
     loadSavedGallery();
-
-    renderPage(currentPageIndex);
+    renderAll();
     initScrollHeader();
-    initWheelNav();
-    initSwipe();
+    initIntersectionObserver();
 });
 
-function initScrollHeader() {
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
-}
-
-// Controla se o usuário já atingiu o limite e está "pronto" para trocar de seção.
-// Só muda de seção na segunda rolagem após atingir o limite.
-let scrollEdgeReached = false;
-let scrollEdgeTimer = null;
-
-function initWheelNav() {
-    window.addEventListener('wheel', (e) => {
-        if (isAnimating) return;
-
-        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 4;
-        const atTop    = window.scrollY <= 4;
-
-        if (e.deltaY > 0 && atBottom) {
-            if (scrollEdgeReached) {
-                // Segunda rolagem no limite: troca de seção
-                scrollEdgeReached = false;
-                nextPage();
-            } else {
-                // Primeira vez que chegou ao fundo: marca e aguarda
-                scrollEdgeReached = true;
-                clearTimeout(scrollEdgeTimer);
-                // Reseta se o usuário parar de rolar por 1.5s
-                scrollEdgeTimer = setTimeout(() => { scrollEdgeReached = false; }, 1500);
-            }
-        } else if (e.deltaY < 0 && atTop) {
-            if (scrollEdgeReached) {
-                scrollEdgeReached = false;
-                prevPage();
-            } else {
-                scrollEdgeReached = true;
-                clearTimeout(scrollEdgeTimer);
-                scrollEdgeTimer = setTimeout(() => { scrollEdgeReached = false; }, 1500);
-            }
-        } else {
-            // Usuário rolou para dentro da seção: reseta o estado
-            scrollEdgeReached = false;
-            clearTimeout(scrollEdgeTimer);
-        }
-    }, { passive: true });
-}
-
-function initSwipe() {
-    let startY = 0;
-    window.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
-    window.addEventListener('touchend', e => {
-        if (isAnimating) return;
-        const diff = startY - e.changedTouches[0].clientY;
-        const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 4;
-        const atTop    = window.scrollY <= 4;
-        if (diff > 60 && atBottom) nextPage();
-        if (diff < -60 && atTop) prevPage();
-    }, { passive: true });
-}
-
 // =============================================
-// NAVIGATION
+// RENDER — página única, todas as seções de uma vez
 // =============================================
-function nextPage() {
-    if (currentPageIndex < pagesData.length) { currentPageIndex++; renderPage(currentPageIndex); }
-}
-function prevPage() {
-    if (currentPageIndex > 0) { currentPageIndex--; renderPage(currentPageIndex); }
-}
-function showPage(type) {
-    if (isAnimating) return;
-    if (type === 'inicio' || type === 'servicos') currentPageIndex = 0;
-    else if (type === 'espaco') currentPageIndex = pagesData.length;
-    renderPage(currentPageIndex);
-}
-
-// =============================================
-// RENDER
-// =============================================
-function renderPage(index) {
+function renderAll() {
     const area = document.getElementById('content-area');
-    const newSection = document.createElement('div');
-    newSection.className = 'page-section';
-    newSection.innerHTML = index === pagesData.length ? getSpacePageHTML() : getServicePageHTML(pagesData[index]);
+    area.innerHTML = '';
 
-    const current = area.querySelector('.page-section.active');
-    if (current) {
-        isAnimating = true;
-        current.classList.remove('active');
-        current.style.opacity = '0';
-        current.style.transform = 'translateY(-16px)';
-        setTimeout(() => {
-            area.innerHTML = '';
-            area.appendChild(newSection);
-            requestAnimationFrame(() => {
-                newSection.classList.add('active');
-                isAnimating = false;
-                window.scrollTo(0, 0);
-            });
-        }, 380);
-    } else {
-        area.appendChild(newSection);
-        requestAnimationFrame(() => newSection.classList.add('active'));
-    }
+    // Hero
+    area.insertAdjacentHTML('beforeend', `
+        <section class="scroll-section" id="section-hero">
+            <div class="hero-banner">
+                <p class="hero-eyebrow">Nails Designer</p>
+                <h1 class="hero-name">Jenyffer Araújo</h1>
+                <p class="hero-sub">Beleza que transforma</p>
+            </div>
+        </section>
+    `);
+
+    // Seções de serviço
+    pagesData.forEach(data => {
+        const section = document.createElement('section');
+        section.className = 'scroll-section';
+        section.id = `section-${data.id}`;
+        section.innerHTML = getServiceSectionHTML(data);
+        area.appendChild(section);
+    });
+
+    // Seção Espaço
+    const spaceSection = document.createElement('section');
+    spaceSection.className = 'scroll-section';
+    spaceSection.id = 'section-espaco';
+    spaceSection.innerHTML = getSpacePageHTML();
+    area.appendChild(spaceSection);
 }
 
 // =============================================
-// SERVICE PAGE HTML
+// INTERSECTION OBSERVER — anima entrada/saída
 // =============================================
-function getServicePageHTML(data) {
-    const isFirst = pagesData.indexOf(data) === 0;
-    const services = data.hasTypes ? data.services[data.currentType] : data.services;
+function initIntersectionObserver() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '-15% 0px -15% 0px',
+        threshold: 0
+    });
 
-    const heroHTML = isFirst ? `
-        <div class="hero-banner">
-            <p class="hero-eyebrow">Nails Designer</p>
-            <h1 class="hero-name">Jennifer Araújo</h1>
-            <p class="hero-sub">Beleza que transforma</p>
-        </div>` : '';
+    document.querySelectorAll('.scroll-section').forEach(s => observer.observe(s));
+}
+
+// =============================================
+// NAVIGATION — links do menu rolam suavemente
+// =============================================
+function showPage(type) {
+    let targetId = 'section-hero';
+    if (type === 'servicos') targetId = `section-${pagesData[0].id}`;
+    else if (type === 'espaco') targetId = 'section-espaco';
+
+    const el = document.getElementById(targetId);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    closeMobileMenu();
+}
+
+// =============================================
+// SERVICE SECTION HTML
+// =============================================
+function getServiceSectionHTML(data) {
+    const services = data.hasTypes ? data.services[data.currentType] : data.services;
 
     const typeSelectorHTML = data.hasTypes ? `
         <div class="type-selector">
@@ -358,7 +299,6 @@ function getServicePageHTML(data) {
     `).join('');
 
     return `
-        ${heroHTML}
         <div class="service-page">
             <div class="container">
                 <div class="page-layout">
@@ -436,7 +376,14 @@ function getSpacePageHTML() {
 // =============================================
 function changeType(pageId, type) {
     const page = pagesData.find(p => p.id === pageId);
-    if (page) { page.currentType = type; renderPage(currentPageIndex); }
+    if (!page) return;
+    page.currentType = type;
+    // Rerenderiza apenas a seção afetada
+    const section = document.getElementById(`section-${pageId}`);
+    if (section) {
+        section.innerHTML = getServiceSectionHTML(page);
+        section.classList.add('visible');
+    }
 }
 
 function handleServiceClick(header, event) {
@@ -526,6 +473,16 @@ window.addEventListener('keydown', e => {
 });
 
 // =============================================
+// HEADER SCROLL
+// =============================================
+function initScrollHeader() {
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+}
+
+// =============================================
 // MOBILE MENU
 // =============================================
 function toggleMobileMenu() {
@@ -533,7 +490,6 @@ function toggleMobileMenu() {
     const toggle = document.getElementById('menu-toggle');
     const isOpen = menu.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
-    // Impede scroll do body enquanto menu está aberto
     document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 

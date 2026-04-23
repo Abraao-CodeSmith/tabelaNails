@@ -215,27 +215,36 @@ a { text-decoration: none; color: inherit; }
    ============================================= */
 #content-area {
     margin-top: var(--header-h);
-    min-height: calc(100vh - var(--header-h));
 }
 
 /* =============================================
-   PAGE TRANSITIONS
+   SCROLL SECTIONS — animação de entrada/saída
    ============================================= */
-.page-section {
+.scroll-section {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .6s ease, transform .6s ease;
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    top: 0; left: 0;
+    transform: translateY(32px);
+    transition: opacity .55s cubic-bezier(.4,0,.2,1),
+                transform .55s cubic-bezier(.4,0,.2,1);
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.page-section.active {
+.scroll-section:last-child {
+    border-bottom: none;
+}
+
+.scroll-section.visible {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
-    position: relative;
+}
+
+#section-hero {
+    padding: 0;
+}
+
+/* Hero não precisa de padding extra */
+#section-hero {
+    padding: 0;
 }
 
 /* =============================================
@@ -279,7 +288,7 @@ a { text-decoration: none; color: inherit; }
    SERVICE PAGE LAYOUT
    ============================================= */
 .service-page {
-    padding: 40px 0 80px;
+    width: 100%;
 }
 
 .page-layout {
